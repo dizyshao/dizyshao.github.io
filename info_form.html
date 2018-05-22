@@ -1,0 +1,54 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Evaluation
+{% endblock %}
+
+{% block main %}
+    <form action="/" method="post">
+        <b>Employee Information</b> <br> <br>
+         <div class="form-group">
+            Employee's Name:
+            <input autocomplete="off" autofocus class="form-control" name="name" type="text"/> <br>
+        </div>
+         <div class="form-group">
+            Job Title:
+            <input autocomplete="off" class="form-control" name="job" type="text"/>
+            </div>
+        <div class="form-group">
+            Department:
+            <input autocomplete="off"  class="form-control" name="department" type="text"/>
+        </div>
+        <div class="form-group">
+            Starting date:
+            <input autocomplete="off"  class="form-control" name="start" type="date" placeholder="mm-dd-yyyy"/>
+        </div>
+        <div class="form-group">
+            <input id="watchme"  class="form-control" type="radio" name="employment" value="Part-time"> Part-time
+            <input  class="form-control" type="radio" name="employment" value="Full-time"> Full-time <br>
+        </div>
+        <script type="text/javascript">
+        $(document).ready(function() {
+            // $('#show-me').hide();
+           $('input[name="employment"]').click(function() {
+               $('#show-me').hide();
+               if($(this).attr('id') == 'watchme') {
+                    $('#show-me').show();
+               }
+
+               else {
+                    $('#show-me').hide();
+               }
+           });
+        });
+        </script>
+        <div id='show-me'>
+            <input class="form-control" type="radio" name="education" value="High School"> High School
+            <input class="form-control" type="radio" name="education" value="College"> College <br>
+         </div>
+         <br>
+         </script>
+    <br>
+        <button class="btn btn-primary" type="submit">Next</button>
+    </form>
+{% endblock %}

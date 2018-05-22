@@ -1,0 +1,82 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Part I
+{% endblock %}
+
+{% block main %}
+    <form action="/part1" method="post">
+        <b>PART I </b><br>
+        <br>
+        Indicate the level of accomplishment on a scale of 1-5 with 5 being highest <br> <br>
+        <table class = "table table-striped" style="width=150">
+            <th colspan="5">Goals for this assessment period (past year)</th>
+
+        <tr>
+            <th> </th>
+            <th>Description</th>
+            <th>Extent of accomplishments and achievements</th>
+            <th>Areas for growth and/or improvment</th>
+
+            <tr>
+            <td>Goal #1</td>
+      <td> <textarea rows="4" cols="30" autocomplete="off"  autofocus class="form-control" name="goal1" > </textarea> </td>
+            <td>
+                <select name="level1" class="form-control">
+                <option disabled="" value="" selected="">1-5</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+            </select>
+            </td>
+            <td> <textarea rows="4" cols="30" autocomplete="off"  autofocus class="form-control" name="area1" > </textarea> </td>
+            </tr>
+
+            <tr>
+            <td>Goal #2</td>
+            <td> <textarea rows="4" cols="30" autocomplete="off"  autofocus class="form-control" name="goal2" > </textarea> </td>
+            <td>
+                <select name="level2" class="form-control">
+                <option disabled="" value="" selected="">1-5</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+            </select>
+            </td>
+            <td> <textarea rows="4" cols="30" autocomplete="off"  autofocus class="form-control" name="area2" > </textarea> </td>
+            </tr>
+        </tr>
+    <table class = "table table-striped" style="width=100%">
+        <th colspan="5">Future Goals for the Individual (coming year)</th>
+        <tr>
+            <th> </th>
+            <th>Description</th>
+            <th>Specific objectives for the goal</th>
+            <th>Resources and support required</th>
+        </tr>
+        <tr>
+            <td>Goal #1</td>
+            <td><textarea rows="4" cols="30" class="form-control" name="description1" > </textarea> </td>
+            <td><textarea rows="4" cols="30" placeholder="(measures of success)" class="form-control" name="objective1"></textarea></td>
+            <td><textarea rows="4" cols="30" class="form-control" name="resources1" placeholder="(i.e., course work, other training, equipment, supervisor access or funding)"></textarea></td>
+            <th>
+            <tr>
+            <td>Goal #2</td>
+            <td><textarea rows="4" cols="30" autocomplete="off" class="form-control" name="description2"></textarea> </td>
+            <td><textarea rows="4" cols="30" autocomplete="off" class="form-control" name="objective2" placeholder="(measures of success)"></textarea> </td>
+            <td><textarea rows="4" cols="30" autocomplete="off" class="form-control" name="resources2" placeholder="(i.e., course work, other training, equipment, supervisor access or funding)"></textarea></td>
+            </tr>
+        </tr>
+        <br>
+        <br>
+
+        <table class = "table table-striped" style="width=100%">
+            <button class="btn btn-primary" name="submit" value="forward">Next</button>
+         </tr>
+
+    </form>
+{% endblock %}

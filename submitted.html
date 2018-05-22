@@ -1,0 +1,14 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Submitted
+{% endblock %}
+
+{% block main %}
+    <form action="/submitted" method="post">
+        <b>Evaluation Submitted!</b> <br> <br>
+
+        <button class="btn btn-primary" value="again" name="submit">Submit Another Evaluation</button>
+        <button class="btn btn-primary" value="past" name="submit">View Past Evaluations</button>
+    </form>
+{% endblock %}

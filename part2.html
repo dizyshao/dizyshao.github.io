@@ -1,0 +1,301 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Part II
+{% endblock %}
+
+{% block main %}
+    <form action="/part2" method="post">
+        <b>Part II – PERFORMANCE CATEGORIES</b><br>
+        Indicate the level of accomplishment on a scale of 1-5 with 5 being highest <br><br>
+        <table class = "table table-striped" style="width=100%">
+            <th colspan="5">A. Performance related to task aspects of the job (WORK)</th></th>
+
+        <tr>
+            <th>Category</th>
+            <th>Standard</th>
+            <th>Level of Accomplishment</th>
+
+            <tr>
+            <td>Work Quality</td>
+            <td>Provides accurate, thorough, professional work regularly.</td>
+            <td>
+                <select name="work_quality" autofocus class="form-control">
+                <option disabled="" value="" selected="">1-5</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+            </select>
+            </td>
+            </tr>
+
+            <tr>
+            <td>Job Knowledge</td>
+            <td>Well-informed and educated in performing to the level expected for the job.</td>
+            <td>
+                <select name="job_know" class="form-control">
+                <option disabled="" value="" selected="">1-5</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+            </select>
+            </td>
+            </tr>
+
+            <tr>
+            <td>New Knowledge</td>
+            <td>Seeks new knowledge, applies it to the job and shares it with others. </td>
+            <td>
+                <select name="new_know" class="form-control">
+                <option disabled="" value="" selected="">1-5</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+            </select>
+            </td>
+            </tr>
+
+            <tr>
+            <td>Organization & Planning</td>
+            <td>Organizes, plans, and forecasts work skillfully to meet job needs.</td>
+            <td>
+                <select name="organization" class="form-control">
+                <option disabled="" value="" selected="">1-5</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+            </select>
+            </td>
+            </tr>
+
+            <tr>
+            <td>Analysis</td>
+            <td>Analyses problems skillfully; uses logic to reach solutions.</td>
+            <td>
+                <select name="analysis" class="form-control">
+                <option disabled="" value="" selected="">1-5</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+            </select>
+            </td>
+            </tr>
+
+            <tr>
+            <td>Resource Use</td>
+            <td>Effectively uses human resources and funds available to accomplish the job.</td>
+            <td>
+                <select name="resource" class="form-control">
+                <option disabled="" value="" selected="">1-5</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+            </select>
+            </td>
+            </tr>
+
+            <tr>
+            <td>Attendance & Punctuality</td>
+            <td>Regularly present and punctual.</td>
+            <td>
+                <select name="attendance" class="form-control">
+                <option disabled="" value="" selected="">1-5</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+            </select>
+            </td>
+            </tr>
+
+            <tr>
+            <td>Safety & Health Observance</td>
+            <td>Analyses problems skillfully; uses logic to reach solutions.</td>
+            <td>
+                <select name="safety" class="form-control">
+                <option disabled="" value="" selected="">1-5</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+            </select>
+            </td>
+            </tr>
+            </tr>
+
+            <tr>
+            <td>Dependability & Consistency</td>
+            <td>Personally responsible, steadfast and can be called upon for difficult and pressured challenges.</td>
+            <td>
+                <select name="dependability" class="form-control">
+                <option disabled="" value="" selected="">1-5</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+            </select>
+            </td>
+            </tr>
+
+            <tr>
+            <td>Communication</td>
+            <td>Communicates knowledge clearly, accurately and thoroughly.</td>
+            <td>
+                <select name="communication" class="form-control">
+                <option disabled="" value="" selected="">1-5</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+            </select>
+            </td>
+            </tr>
+
+            <tr>
+            <td>Interpersonal Skills</td>
+            <td>Works well with others; gets things done with people, and keeps information lines open at all levels.</td>
+            <td>
+                <select name="interpersonal" class="form-control">
+                <option disabled="" value="" selected="">1-5</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+            </select>
+            </td>
+            </tr>
+
+            <tr>
+            <td>Initiative</td>
+            <td>Helps to determine the needs of the work place; helps all to meet the goals.</td>
+            <td>
+                <select name="initiative" class="form-control">
+                <option disabled="" value="" selected="">1-5</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+            </select>
+            </td>
+            </tr>
+
+
+            <table class = "table table-striped" style="width=100%">
+            <th colspan="5">B. Non task-specific performance (HOW) <br> (include comments on behaviors you observe which support the rating for each of the values below)</th></th>
+            <tr>
+            <th>Category</th>
+            <th>Standard</th>
+            <th>Level of Accomplishment</th>
+            <th>Comments</th>
+
+            <tr>
+            <td>Caring</td>
+            <td>Shows empathy and compassion to others</td>
+            <td>
+                <select name="caring" class="form-control">
+                <option disabled="" value="" selected="">1-5</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+            </td>
+            <td><textarea rows="4" cols="30" autocomplete="off" class="form-control" name="caring_t"></textarea> </td>
+            </tr>
+
+            <tr>
+            <td>Collaborative</td>
+            <td>Works well with a team; cooperates with others to get things done</td>
+            <td>
+                <select name="collab" class="form-control">
+                <option disabled="" value="" selected="">1-5</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+            </select>
+
+            </td>
+            <td><textarea rows="4" cols="30" autocomplete="off" class="form-control" name="collab_t"></textarea> </td>
+
+            </tr>
+
+            <tr>
+            <td>Committed</td>
+            <td>Dedicated to the mission; remains engaged and excited about work; takes pride in being a LEAP employee</td>
+            <td>
+                <select name="committed" class="form-control">
+                <option disabled="" value="" selected="">1-5</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+            </select>
+            </td>
+            <td><textarea rows="4" cols="30" autocomplete="off" class="form-control" name="committed_t"></textarea> </td>
+
+            </tr>
+            <tr>
+
+            <td>Honest</td>
+            <td>Tells the truth in all situations; is trustworthy and reliable</td>
+            <td>
+                <select name="honest" class="form-control">
+                <option disabled="" value="" selected="">1-5</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+            </select>
+            </td>
+            <td><textarea rows="4" cols="30" autocomplete="off" class="form-control" name="honest_t"></textarea> </td>
+
+            </tr>
+
+            <td>Respectful</td>
+            <td>Shows politeness and humility</td>
+            <td>
+                <select name="respectful" class="form-control">
+                <option disabled="" value="" selected="">1-5</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+            </select>
+            </td>
+            <td><textarea rows="4" cols="30" autocomplete="off" class="form-control" name="respectful_t"></textarea> </td>
+
+            </tr>
+        </tr>
+        <br>
+
+        <table class = "table table-striped" style="width=100%">
+            <button class="btn btn-primary" name="submit" value="forward">Next</button>
+         </tr>
+
+
+    </form>
+{% endblock %}

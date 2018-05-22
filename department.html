@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Department Goals
+{% endblock %}
+
+{% block main %}
+    <form action="/department" method="post">
+        <b>Department-Specific Goals</b> <br> <br>
+        LEAP’s MISSION is to develop the strengths and talents of young leaders who create and implement year-round,
+        community-based programs designed to achieve positive academic and social outcomes for children living in high
+        poverty urban neighborhoods.
+        <br><br>
+        Please list the goals of your department: <br> <br>
+        <textarea rows="5" cols="50" autocomplete="off" autofocus class="form-control" name="goal" > </textarea>
+
+        <br>
+        <br><br>
+        <button class="btn btn-primary" name="submit" value="forward">Next</button>
+    </form>
+{% endblock %}

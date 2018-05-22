@@ -1,0 +1,15 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Part III
+{% endblock %}
+
+{% block main %}
+    <form action="/part3" method="post">
+        <b>Part III – Development Goals</b> <br> <br>
+        What professional goal does the employee have for the next 2+ years? <br> <br>
+
+        <textarea rows="5" cols="50" autocomplete="off" class="form-control" name="goals"></textarea><br> <br>
+        <button class="btn btn-primary" input id="watchme" type="submit">Next</button>
+    </form>
+{% endblock %}

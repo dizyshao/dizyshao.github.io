@@ -1,0 +1,192 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Employee Evaluation
+{% endblock %}
+
+{% block main %}
+    <form action="/past_evals" method="post">
+        <table class = "table table-striped" style="width=100%">
+                <tr>
+                    <th>Date Submitted</th>
+                    <th>Employee</th>
+                    <th>Job</th>
+                    <th>Department</th>
+                    <th>Start Date</th>
+                    <th>Employment</th>
+                    <th>Status</th>
+                </tr>
+                {% for evaluation in evaluations %}
+                <tr>
+                    <td>{{evaluation.time}}</td>
+                    <td>{{evaluation.name}}</td>
+                    <td>{{evaluation.job}}</td>
+                    <td>{{evaluation.department}}</td>
+                    <td>{{evaluation.start}}</td>
+                    <td>{{evaluation.employment}}</td>
+                    <td>{{evaluation.education}}</td>
+                </tr>
+                {% endfor %}
+            </table> <br>
+
+            <table class = "table table-striped" style="width=150">
+            <th colspan="4">Goals for this assessment period (past year)</th>
+
+        <tr>
+            <th> </th>
+            <th>Description</th>
+            <th>Extent of accomplishments and achievements</th>
+            {% for x in one %}
+            <tr>
+            <td>Goal #1</td>
+                <td>{{x.goal1}}</td>
+                <td>{{x.level1}}</td>
+            </tr>
+            <tr>
+            <td>Goal #2</td>
+                <td>{{x.goal2}}</td>
+                <td>{{x.level2}}</td>
+            </tr>
+            {% endfor %}
+
+            <th colspan="4">Future Goals for the Individual (coming year)</th> <br>
+            <tr>
+            <th> </th>
+            <th>Description</th>
+            <th>Objectives</th>
+            <!--<th>Resources</th>-->
+            </tr>
+            {% for x in one %}
+            <tr>
+            <td>Goal #1</td>
+                <td>{{x.description1}}</td>
+                <td>{{x.objective1}}</td>
+                <!--<td>{{x.resources1}}</td>-->
+            </tr>
+            <tr>
+            <td>Goal #2</td>
+                <td>{{x.description2}}</td>
+                <td>{{x.objective2}}</td>
+                <!--<td>{{x.resources2}}</td>-->
+            </tr>
+                {% endfor %}
+        </tr>
+        <table class = "table table-striped" style="width=100%">
+            <th colspan="4">Performance related to task aspects of the job (WHAT)</th> <br>
+                <tr>
+                    <th>Category</th>
+                    <th>Level of Accomplishment</th>
+                </tr>
+                {% for y in part_twoa %}
+                <tr>
+                    <td>Work Quality</td>
+                    <td>{{y.work_quality}}</td>
+                </tr>
+                <tr>
+                    <td>Job Knowledge</td>
+                    <td>{{y.job_know}}</td>
+                </tr>
+                <tr>
+                    <td>New Knowledge</td>
+                    <td>{{y.new_know}}</td>
+                </tr>
+                <tr>
+                    <td>Organization & Planning</td>
+                    <td>{{y.organization}}</td>
+                </tr>
+                <tr>
+                    <td>Analysis</td>
+                    <td>{{y.analysis}}</td>
+                </tr>
+                <tr>
+                    <td>Resource Use</td>
+                    <td>{{y.resource}}</td>
+                </tr>
+                <tr>
+                    <td>Attendance & Punctuality</td>
+                    <td>{{y.attendance}}</td>
+                </tr>
+                <tr>
+                    <td>Safety & Health Observance</td>
+                    <td>{{y.safety}}</td>
+                </tr>
+                <tr>
+                    <td>Dependability & Consistency</td>
+                    <td>{{y.dependability}}</td>
+                </tr>
+                <tr>
+                    <td>Communication</td>
+                    <td>{{y.communication}}</td>
+                </tr>
+                <tr>
+                    <td>Interpersonal skills</td>
+                    <td>{{y.interpersonal}}</td>
+                </tr>
+                <tr>
+                    <td>Initiative</td>
+                    <td>{{y.initiative}}</td>
+                </tr>
+                {% endfor %}
+                </tr>
+            <table class = "table table-striped" style="width=100%">
+                <th colspan="4">Non task-specific performance (HOW)</th> <br>
+                <tr>
+                    <th>Category</th>
+                    <th>Level of Accomplishment</th>
+                    <th>Comments</th>
+                </tr>
+                {% for z in part_twob %}
+                <tr>
+                    <td>Caring</td>
+                    <td>{{z.caring}}</td>
+                    <td>{{z.caring_t}}</td>
+                </tr>
+
+                <tr>
+                    <td>Collaborative</td>
+                    <td>{{z.collab}}</td>
+                    <td>{{z.collab_t}}</td>
+                </tr>
+
+                <tr>
+                    <td>Committed</td>
+                    <td>{{z.committed}}</td>
+                    <td>{{z.committed_t}}</td>
+                </tr>
+
+                <tr>
+                    <td>Honesty</td>
+                    <td>{{z.honest}}</td>
+                    <td>{{z.honest_t}}</td>
+                </tr>
+
+                <tr>
+                    <td>Respectful</td>
+                    <td>{{z.respectful}}</td>
+                    <td>{{z.respectful_t}}</td>
+                </tr>
+                {% endfor %}
+            </table>
+        <table class = "table table-striped" style="width=100%">
+            <th colspan="1">Professional Goals</th> <br>
+            {% for a in part_three %}
+            <tr>
+                <td>{{a.goals}}</td>
+            </tr>
+            {% endfor %}
+            </table>
+
+        <table class = "table table-striped" style="width=100%">
+            <th colspan="2">Overall Comments</th> <br>
+            {% for b in part_four %}
+            <tr><td>Supervisor's Comments</td>
+            <td>{{b.sup_comm}}</td>
+            </tr>
+
+            <tr><td>Employee's Comments</td>
+            <td>{{b.emp_comm}}</td></tr>
+            {% endfor %}
+            </table>
+
+    </form>
+{% endblock %}

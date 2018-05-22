@@ -1,0 +1,38 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Part IV
+{% endblock %}
+
+{% block main %}
+    <form action="/part4" method="post">
+        <b>Part IV – Overall Comments</b> <br> <br>
+        <table class = "table table-striped" style="width=100%">
+            <tr>
+               <td>Supervisor's Overall Comments:</td>
+               <td><textarea rows="4" cols="30" autocomplete="off" class="form-control" name="sup_comm"></textarea><br> <br></td>
+            </tr>
+            <tr>
+               <td>Employee's Comments:</td>
+               <td><textarea rows="4" cols="30" autocomplete="off" class="form-control" name="emp_comm"></textarea><br> <br></td>
+            </tr>
+        </tr>
+        <table class = "table table-white" style="width=100%">
+            <tr>
+
+                <td>Supervisor's Electronic Signature:</td>
+            <td><input autocomplete="off" autofocus class="form-control" name="sup_sig" type="text"/></td>
+            </tr>
+        <table class = "table table-white" style="width=100%">
+            <tr>
+                <td>Employee's Electronic Signature: </td>
+                <td><input autocomplete="off" autofocus class="form-control" name="emp_sig" type="text"/></td>
+                </tr>
+         </tr>
+
+        <table class = "table table-striped" style="width=100%">
+            <button class="btn btn-primary" type="submit">Submit</button>
+         </tr>
+
+    </form>
+{% endblock %}

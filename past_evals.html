@@ -1,0 +1,28 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Past Evaluations
+{% endblock %}
+
+{% block main %}
+    <form action="/past_evals" method="post">
+        <table class = "table table-striped" style="width=100%">
+                <tr>
+                    <th>Date Submitted</th>
+                    <th>Employee</th>
+                    <th>Employment</th>
+                    <th>Status</th>
+                    <th>Evaluation</th>
+                </tr>
+                {% for evaluation in evaluations %}
+                <tr>
+                    <td>{{evaluation.time}}</td>
+                    <td>{{evaluation.name}}</td>
+                    <td>{{evaluation.employment}}</td>
+                    <td>{{evaluation.education}}</td>
+                    <td><button class="btn btn-primary" name="submit" value="{{evaluation.id}}" type="submit">View</button></td>
+                </tr>
+                {% endfor %}
+            </table>
+    </form>
+{% endblock %}
